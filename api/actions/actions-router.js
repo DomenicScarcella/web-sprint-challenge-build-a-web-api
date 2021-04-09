@@ -7,7 +7,7 @@ const { validateAction, validateActionId } = require('../middleware/mw.js');
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
-    Action.get(req.query)
+    Action.get()
         .then(action => {
             res.status(200).json(action);
         })
